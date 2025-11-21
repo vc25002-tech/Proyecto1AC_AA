@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace Proyecto1A.CapaPresentacion
 {
-    public partial class FrmProductos: Form
+    public partial class FrmProductos : Form
     {
         public FrmProductos()
         {
@@ -21,6 +21,24 @@ namespace Proyecto1A.CapaPresentacion
         //Creacion de una lista estatica que simulara la DB
 
         public static List<Producto> listaProductos = new List<Producto>();
+        private void DeshabilitarBotones() { 
+
+        btnModificar.Enabled = false;
+            btnEliminar.Enabled = false;
+            btnLimpiar.Enabled = false;
+            btnNuevo.Enabled = true;
+
+        }
+
+        private void HabilitarBotones() {
+
+            btnNuevo.Enabled = false;
+            btnModificar.Enabled = true;
+            btnEliminar.Enabled = true;
+            btnLimpiar.Enabled = true;
+             }
+
+
 
         private void label2_Click(object sender, EventArgs e)
         {
@@ -29,6 +47,7 @@ namespace Proyecto1A.CapaPresentacion
 
         private void FrmProductos_Load(object sender, EventArgs e)
         {
+            DeshabilitarBotones();
             //Cargar los datos iniciales
             if (!listaProductos.Any())
             {// cada vez que se cargue el formulario, si la lista esta vacia,
@@ -146,6 +165,8 @@ namespace Proyecto1A.CapaPresentacion
             Precio.Text = dgnProductos.CurrentRow.Cells["Precio"].Value.ToString();
             Stock.Text = dgnProductos.CurrentRow.Cells["Stock"].Value.ToString();
             Estado.Checked = (bool)dgnProductos.CurrentRow.Cells["Estado"].Value;
+
+            HabilitarBotones();
         }
         
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -225,6 +246,7 @@ namespace Proyecto1A.CapaPresentacion
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
             RefrescarGrid();//refrescar el datagridview
             LimpiarCampos();//limpiar los controles
+            HabilitarBotones();
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)

@@ -36,24 +36,27 @@ namespace Proyecto1A.CapaPresentacion
                 listaClientes.Add(new Clientes
                 {
                     Id = 1,
-                    Nombre = "Carlos miguel",
-                    Apellido = "alvadaro cruz",
+                    Nombre = "Carlos miguel alvadaro cruz",
+                    Correo = "carlos.miguel@example.com",
+                    Dui = "90715423-4",
                     Telefono = "(503+)3234-4545",
                     Estado = true
                 });
                 listaClientes.Add(new Clientes
                 {
                     Id = 2,
-                    Nombre = "josefina menendez",
-                    Apellido = "valle torrez",
+                    Nombre = "josefina menendez Valle Torrez",
+                    Correo = "josefina.mendez@example.com",
+                    Dui = "18340295-6",
                     Telefono = "(503+)7655-4324",
                     Estado = true
                 });
                 listaClientes.Add(new Clientes
                 {
                     Id = 3,
-                    Nombre = "Raul menedez",
-                    Apellido = "Valle Torrez",
+                    Nombre = "Raul menedez Valle Torrez",
+                    Correo = "raul.mendez@example.com",
+                    Dui = "02456378-1",
                     Telefono = "(503+)5466-5453",
                     Estado = true
                 });
@@ -79,12 +82,20 @@ namespace Proyecto1A.CapaPresentacion
                 return;
             }
 
+            if (string.IsNullOrWhiteSpace(txtCorreo.Text))
+            {
+                MessageBox.Show("El Correo de la persona es obligatorio.", "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtNombre.Focus();
+                return;
+            }
+
             {
                 //Validaciones basicas
                 //valida que el nombre no este vacio
-                if (string.IsNullOrWhiteSpace(txtApellido.Text))
+                if (string.IsNullOrWhiteSpace(txtDui.Text))
                 {
-                    MessageBox.Show("El Apellido de la persona es obligatorio.", "Error",
+                    MessageBox.Show("El Dui de la persona es obligatorio.", "Error",
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
                     txtNombre.Focus();
                     return;
@@ -106,7 +117,8 @@ namespace Proyecto1A.CapaPresentacion
             {
                 Id = nuevoId,
                 Nombre = txtNombre.Text,
-                Apellido = txtApellido.Text,
+                Correo = txtCorreo.Text,
+                Dui = txtDui.Text,
                 Telefono = txtTelefono.Text,
                 Estado = Estado.Checked
             };
@@ -120,7 +132,7 @@ namespace Proyecto1A.CapaPresentacion
         private void LimpiarCampos()
         {
             txtNombre.Clear();
-            txtApellido.Clear();
+            txtDui.Clear();
             txtTelefono.Clear();
             Estado.Checked = true;
             txtNombre.Focus();
@@ -134,7 +146,8 @@ namespace Proyecto1A.CapaPresentacion
             if (dvgClientes.CurrentRow == null) return;
             txtId.Text = dvgClientes.CurrentRow.Cells["Id"].Value.ToString();
             txtNombre.Text = dvgClientes.CurrentRow.Cells["Nombre"].Value.ToString();
-            txtApellido.Text = dvgClientes.CurrentRow.Cells["Apellido"].Value.ToString();
+            txtCorreo.Text = dvgClientes.CurrentRow.Cells["Correo"].Value.ToString();
+            txtDui.Text = dvgClientes.CurrentRow.Cells["Dui"].Value.ToString();
             txtTelefono.Text = dvgClientes.CurrentRow.Cells["Telefono"].Value.ToString();
             Estado.Checked = (bool)dvgClientes.CurrentRow.Cells["Estado"].Value;
         }
@@ -191,11 +204,21 @@ namespace Proyecto1A.CapaPresentacion
                 txtNombre.Focus();
                 return;
             }//valida que el precio ingresado sea un decimal
-            if (string.IsNullOrWhiteSpace(txtApellido.Text))
+
+            //Validaciones identicas a las del boton guardar
+            if (string.IsNullOrWhiteSpace(txtCorreo.Text))
             {
-                MessageBox.Show("El Apellido del cliente es obligatorio.", "Error",
+                MessageBox.Show("El Correo del cliente es obligatorio.", "Error",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
-                txtApellido.Focus();
+                txtNombre.Focus();
+                return;
+            }
+
+            if (string.IsNullOrWhiteSpace(txtDui.Text))
+            {
+                MessageBox.Show("El Dui del cliente es obligatorio.", "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtDui.Focus();
                 return;
             }//valida que el stock ingresado sea un entero
             if (string.IsNullOrWhiteSpace(txtTelefono.Text))
@@ -207,10 +230,11 @@ namespace Proyecto1A.CapaPresentacion
             }
             //Actualizar los campos en memoria
             prod.Nombre = txtNombre.Text.Trim();
-            prod.Apellido = txtApellido.Text.Trim();
+            prod.Correo = txtCorreo.Text.Trim();
+            prod.Dui = txtDui.Text.Trim();
             prod.Telefono = txtTelefono.Text.Trim();
             prod.Estado = Estado.Checked;
-            MessageBox.Show("Producto actualizado correctamente.", "Éxito",
+            MessageBox.Show("Cliente actualizado correctamente.", "Éxito",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
             RefrescarGrid();//refrescar el datagridview
             LimpiarCampos();//limpiar los controles
@@ -230,6 +254,11 @@ namespace Proyecto1A.CapaPresentacion
         private void btnVolver_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void txtApellido_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -32,7 +32,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtTelefono = new System.Windows.Forms.TextBox();
-            this.txtApellido = new System.Windows.Forms.TextBox();
+            this.txtDui = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtId = new System.Windows.Forms.TextBox();
             this.Estado = new System.Windows.Forms.CheckBox();
@@ -48,6 +48,8 @@
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.dvgClientes = new System.Windows.Forms.DataGridView();
             this.btnVolver = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtCorreo = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dvgClientes)).BeginInit();
             this.SuspendLayout();
@@ -65,8 +67,10 @@
             // groupBox1
             // 
             this.groupBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("groupBox1.BackgroundImage")));
+            this.groupBox1.Controls.Add(this.txtCorreo);
+            this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.txtTelefono);
-            this.groupBox1.Controls.Add(this.txtApellido);
+            this.groupBox1.Controls.Add(this.txtDui);
             this.groupBox1.Controls.Add(this.txtNombre);
             this.groupBox1.Controls.Add(this.txtId);
             this.groupBox1.Controls.Add(this.Estado);
@@ -87,21 +91,22 @@
             // 
             // txtTelefono
             // 
-            this.txtTelefono.Location = new System.Drawing.Point(430, 200);
+            this.txtTelefono.Location = new System.Drawing.Point(430, 227);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(178, 31);
             this.txtTelefono.TabIndex = 16;
             // 
-            // txtApellido
+            // txtDui
             // 
-            this.txtApellido.Location = new System.Drawing.Point(109, 203);
-            this.txtApellido.Name = "txtApellido";
-            this.txtApellido.Size = new System.Drawing.Size(178, 31);
-            this.txtApellido.TabIndex = 15;
+            this.txtDui.Location = new System.Drawing.Point(90, 227);
+            this.txtDui.Name = "txtDui";
+            this.txtDui.Size = new System.Drawing.Size(178, 31);
+            this.txtDui.TabIndex = 15;
+            this.txtDui.TextChanged += new System.EventHandler(this.txtApellido_TextChanged);
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(109, 127);
+            this.txtNombre.Location = new System.Drawing.Point(120, 112);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(178, 31);
             this.txtNombre.TabIndex = 14;
@@ -120,7 +125,7 @@
             this.Estado.BackColor = System.Drawing.Color.Peru;
             this.Estado.Checked = true;
             this.Estado.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.Estado.Location = new System.Drawing.Point(140, 287);
+            this.Estado.Location = new System.Drawing.Point(140, 307);
             this.Estado.Name = "Estado";
             this.Estado.Size = new System.Drawing.Size(158, 29);
             this.Estado.TabIndex = 12;
@@ -130,7 +135,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(32, 291);
+            this.label8.Location = new System.Drawing.Point(27, 311);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(71, 25);
             this.label8.TabIndex = 7;
@@ -147,7 +152,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(340, 203);
+            this.label6.Location = new System.Drawing.Point(340, 230);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(84, 25);
             this.label6.TabIndex = 5;
@@ -156,16 +161,16 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(17, 206);
+            this.label5.Location = new System.Drawing.Point(18, 233);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(86, 25);
+            this.label5.Size = new System.Drawing.Size(45, 25);
             this.label5.TabIndex = 4;
-            this.label5.Text = "Apellido:";
+            this.label5.Text = "Dui:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(18, 127);
+            this.label3.Location = new System.Drawing.Point(18, 115);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(85, 25);
             this.label3.TabIndex = 2;
@@ -228,11 +233,11 @@
             // 
             this.dvgClientes.BackgroundColor = System.Drawing.Color.White;
             this.dvgClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dvgClientes.Location = new System.Drawing.Point(137, 61);
+            this.dvgClientes.Location = new System.Drawing.Point(63, 60);
             this.dvgClientes.Name = "dvgClientes";
             this.dvgClientes.RowHeadersWidth = 51;
             this.dvgClientes.RowTemplate.Height = 24;
-            this.dvgClientes.Size = new System.Drawing.Size(732, 191);
+            this.dvgClientes.Size = new System.Drawing.Size(842, 245);
             this.dvgClientes.TabIndex = 6;
             this.dvgClientes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dvgClientes_CellClick);
             // 
@@ -246,6 +251,22 @@
             this.btnVolver.Text = "Volver";
             this.btnVolver.UseVisualStyleBackColor = true;
             this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(18, 170);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(73, 25);
+            this.label4.TabIndex = 17;
+            this.label4.Text = "Correo:";
+            // 
+            // txtCorreo
+            // 
+            this.txtCorreo.Location = new System.Drawing.Point(120, 170);
+            this.txtCorreo.Name = "txtCorreo";
+            this.txtCorreo.Size = new System.Drawing.Size(488, 31);
+            this.txtCorreo.TabIndex = 18;
             // 
             // FrmClientes
             // 
@@ -292,7 +313,9 @@
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.CheckBox Estado;
-        private System.Windows.Forms.TextBox txtApellido;
+        private System.Windows.Forms.TextBox txtDui;
         private System.Windows.Forms.TextBox txtTelefono;
+        private System.Windows.Forms.TextBox txtCorreo;
+        private System.Windows.Forms.Label label4;
     }
 }

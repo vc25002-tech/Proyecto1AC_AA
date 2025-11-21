@@ -12,7 +12,9 @@ namespace Proyecto1A.CapaEdentidad
 
         public string Nombre { get; set; }
 
-        public string Apellido { get; set; }
+        public string Correo { get; set; }
+
+        public string Dui { get; set; }
 
         public string Telefono { get; set; }
 
