@@ -46,9 +46,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CapaDatos\ClienteDAL.cs" />
+    <Compile Include="CapaDatos\Conexion.cs" />
     <Compile Include="CapaEdentidad\Clientes.cs" />
+    <Compile Include="CapaEdentidad\Clientes2.cs" />
     <Compile Include="CapaEdentidad\Proudcto.cs" />
     <Compile Include="CapaEdentidad\Valiraciones.cs" />
+    <Compile Include="CapaNegocio\ClienteBLL.cs" />
     <Compile Include="CapaPresentacion\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,6 +64,12 @@
     </Compile>
     <Compile Include="CapaPresentacion\Form2.Designer.cs">
       <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CapaPresentacion\FrmClientes2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\FrmClientes2.Designer.cs">
+      <DependentUpon>FrmClientes2.cs</DependentUpon>
     </Compile>
     <Compile Include="CapaPresentacion\FrmProductos.cs">
       <SubType>Form</SubType>
@@ -74,6 +84,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CapaPresentacion\Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CapaPresentacion\FrmClientes2.resx">
+      <DependentUpon>FrmClientes2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CapaPresentacion\FrmProductos.resx">
       <DependentUpon>FrmProductos.cs</DependentUpon>
@@ -101,8 +114,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="CapaDatos\" />
-    <Folder Include="CapaNegocio\" />
     <Folder Include="Recursos\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -308,6 +308,7 @@
             this.MaximizeBox = false;
             this.Name = "Sabor";
             this.Text = "El buen sabor";
+            this.Load += new System.EventHandler(this.Sabor_Load);
             this.panel1.ResumeLayout(false);
             this.menuSuperior.ResumeLayout(false);
             this.menuSuperior.PerformLayout();

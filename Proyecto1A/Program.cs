@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Proyecto1A.CapaPresentacion;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +17,7 @@ namespace Proyecto1A
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Sabor());
+            Application.Run(new FrmClientes2());
         }
     }
 }

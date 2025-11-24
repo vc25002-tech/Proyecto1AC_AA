@@ -39,5 +39,10 @@ namespace Proyecto1A
 
             frm.ShowDialog();
         }
+
+        private void Sabor_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
