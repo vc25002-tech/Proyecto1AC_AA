@@ -119,7 +119,7 @@ namespace Proyecto1A.CapaDatos
 
             {
 
-                string sql = @"SELECT Id, Nombre, Telefono, Dui, Correo Estado FROM Cliente WHERE Nombre LIKE @filtro OR Telefono LIKE @filtro";
+                string sql = @"SELECT Id, Nombre, Telefono, Dui, Correo, Estado FROM Cliente WHERE Nombre LIKE @filtro OR Telefono LIKE @filtro";
                 using (SqlCommand cmd = new SqlCommand(sql, cn))
 
                 {
