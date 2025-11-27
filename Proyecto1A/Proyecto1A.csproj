@@ -46,12 +46,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CapaDatos\CategoriaDAL.cs" />
     <Compile Include="CapaDatos\ClienteDAL.cs" />
     <Compile Include="CapaDatos\Conexion.cs" />
+    <Compile Include="CapaEdentidad\Categoria.cs" />
     <Compile Include="CapaEdentidad\Clientes.cs" />
     <Compile Include="CapaEdentidad\Clientes2.cs" />
     <Compile Include="CapaEdentidad\Proudcto.cs" />
     <Compile Include="CapaEdentidad\Valiraciones.cs" />
+    <Compile Include="CapaNegocio\CategoriaBLL.cs" />
     <Compile Include="CapaNegocio\ClienteBLL.cs" />
     <Compile Include="CapaPresentacion\Form1.cs">
       <SubType>Form</SubType>
@@ -64,6 +67,24 @@
     </Compile>
     <Compile Include="CapaPresentacion\Form2.Designer.cs">
       <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CapaPresentacion\FrmCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\FrmCategoria.Designer.cs">
+      <DependentUpon>FrmCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CapaPresentacion\FrmCategoriaEliminar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\FrmCategoriaEliminar.Designer.cs">
+      <DependentUpon>FrmCategoriaEliminar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CapaPresentacion\frmCategoriaGestion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\frmCategoriaGestion.Designer.cs">
+      <DependentUpon>frmCategoriaGestion.cs</DependentUpon>
     </Compile>
     <Compile Include="CapaPresentacion\FrmClientes2.cs">
       <SubType>Form</SubType>
@@ -84,6 +105,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CapaPresentacion\Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CapaPresentacion\FrmCategoria.resx">
+      <DependentUpon>FrmCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CapaPresentacion\FrmCategoriaEliminar.resx">
+      <DependentUpon>FrmCategoriaEliminar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CapaPresentacion\frmCategoriaGestion.resx">
+      <DependentUpon>frmCategoriaGestion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CapaPresentacion\FrmClientes2.resx">
       <DependentUpon>FrmClientes2.cs</DependentUpon>

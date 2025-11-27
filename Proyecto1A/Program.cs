@@ -17,7 +17,7 @@ namespace Proyecto1A
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmClientes2());
+            Application.Run(new FrmCategoria());
         }
     }
 }
