@@ -187,6 +187,7 @@
             // 
             // dvgDetalle
             // 
+            this.dvgDetalle.AllowUserToAddRows = false;
             this.dvgDetalle.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dvgDetalle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dvgDetalle.Location = new System.Drawing.Point(32, 79);
