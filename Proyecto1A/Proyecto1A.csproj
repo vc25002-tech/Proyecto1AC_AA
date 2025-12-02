@@ -49,6 +49,8 @@
     <Compile Include="CapaDatos\CategoriaDAL.cs" />
     <Compile Include="CapaDatos\ClienteDAL.cs" />
     <Compile Include="CapaDatos\Conexion.cs" />
+    <Compile Include="CapaDatos\ReporteDAL.cs" />
+    <Compile Include="CapaDatos\UsuarioDAL.cs" />
     <Compile Include="CapaDatos\VentaDAL.cs" />
     <Compile Include="CapaEdentidad\Categoria.cs" />
     <Compile Include="CapaEdentidad\Clientes.cs" />
@@ -56,19 +58,29 @@
     <Compile Include="CapaEdentidad\DetalleVenta.cs" />
     <Compile Include="CapaEdentidad\Proudcto.cs" />
     <Compile Include="CapaEdentidad\RepuestaOperacion.cs" />
+    <Compile Include="CapaEdentidad\Seguridad.cs" />
+    <Compile Include="CapaEdentidad\SesionActual.cs" />
     <Compile Include="CapaEdentidad\TipoPago.cs" />
+    <Compile Include="CapaEdentidad\Usuario.cs" />
     <Compile Include="CapaEdentidad\Valiraciones.cs" />
     <Compile Include="CapaEdentidad\Venta.cs" />
     <Compile Include="CapaNegocio\CategoriaBLL.cs" />
     <Compile Include="CapaNegocio\ClienteBLL.cs" />
     <Compile Include="CapaDatos\ProductoDAL.cs" />
     <Compile Include="CapaDatos\TipoPagoDAL.cs" />
+    <Compile Include="CapaNegocio\UsuarioBLL.cs" />
     <Compile Include="CapaNegocio\VentaBLL.cs" />
-    <Compile Include="CapaPresentacion\Form1.cs">
+    <Compile Include="CapaPresentacion\FrmCambiarClave.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CapaPresentacion\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="CapaPresentacion\FrmCambiarClave.Designer.cs">
+      <DependentUpon>FrmCambiarClave.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CapaPresentacion\frmMenuPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\frmMenuPrincipal.Designer.cs">
+      <DependentUpon>frmMenuPrincipal.cs</DependentUpon>
     </Compile>
     <Compile Include="CapaPresentacion\Form2.cs">
       <SubType>Form</SubType>
@@ -100,6 +112,12 @@
     <Compile Include="CapaPresentacion\FrmClientes2.Designer.cs">
       <DependentUpon>FrmClientes2.cs</DependentUpon>
     </Compile>
+    <Compile Include="CapaPresentacion\FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="CapaPresentacion\FrmProductos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,10 +130,19 @@
     <Compile Include="CapaPresentacion\FrmRegistrarVenta.Designer.cs">
       <DependentUpon>FrmRegistrarVenta.cs</DependentUpon>
     </Compile>
+    <Compile Include="CapaPresentacion\FrmUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\FrmUsuarios.Designer.cs">
+      <DependentUpon>FrmUsuarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="CapaPresentacion\Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="CapaPresentacion\FrmCambiarClave.resx">
+      <DependentUpon>FrmCambiarClave.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CapaPresentacion\frmMenuPrincipal.resx">
+      <DependentUpon>frmMenuPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CapaPresentacion\Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
@@ -132,11 +159,17 @@
     <EmbeddedResource Include="CapaPresentacion\FrmClientes2.resx">
       <DependentUpon>FrmClientes2.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CapaPresentacion\FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CapaPresentacion\FrmProductos.resx">
       <DependentUpon>FrmProductos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CapaPresentacion\FrmRegistrarVenta.resx">
       <DependentUpon>FrmRegistrarVenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CapaPresentacion\FrmUsuarios.resx">
+      <DependentUpon>FrmUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

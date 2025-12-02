@@ -55,6 +55,9 @@
             this.cierreDeCajaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblUsuarios = new System.Windows.Forms.Label();
+            this.btnUsuario = new System.Windows.Forms.Button();
+            this.cambiarClaveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.menuSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -63,6 +66,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Peru;
+            this.panel1.Controls.Add(this.btnUsuario);
             this.panel1.Controls.Add(this.button6);
             this.panel1.Controls.Add(this.btnCorteCaja);
             this.panel1.Controls.Add(this.btnIventario);
@@ -78,7 +82,7 @@
             // 
             this.button6.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
-            this.button6.Location = new System.Drawing.Point(21, 498);
+            this.button6.Location = new System.Drawing.Point(21, 583);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(215, 62);
             this.button6.TabIndex = 5;
@@ -156,7 +160,8 @@
             this.gestiónToolStripMenuItem,
             this.ventasToolStripMenuItem,
             this.reporteToolStripMenuItem,
-            this.salirToolStripMenuItem});
+            this.salirToolStripMenuItem,
+            this.cambiarClaveToolStripMenuItem});
             this.menuSuperior.Location = new System.Drawing.Point(0, 0);
             this.menuSuperior.Name = "menuSuperior";
             this.menuSuperior.Size = new System.Drawing.Size(998, 28);
@@ -295,12 +300,42 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // lblUsuarios
+            // 
+            this.lblUsuarios.AutoSize = true;
+            this.lblUsuarios.Location = new System.Drawing.Point(839, 9);
+            this.lblUsuarios.Name = "lblUsuarios";
+            this.lblUsuarios.Size = new System.Drawing.Size(44, 16);
+            this.lblUsuarios.TabIndex = 3;
+            this.lblUsuarios.Text = "label1";
+            // 
+            // btnUsuario
+            // 
+            this.btnUsuario.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUsuario.Image = ((System.Drawing.Image)(resources.GetObject("btnUsuario.Image")));
+            this.btnUsuario.Location = new System.Drawing.Point(21, 494);
+            this.btnUsuario.Name = "btnUsuario";
+            this.btnUsuario.Size = new System.Drawing.Size(215, 62);
+            this.btnUsuario.TabIndex = 6;
+            this.btnUsuario.Text = "Usuarios";
+            this.btnUsuario.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnUsuario.UseVisualStyleBackColor = true;
+            this.btnUsuario.Click += new System.EventHandler(this.btnUsuario_Click);
+            // 
+            // cambiarClaveToolStripMenuItem
+            // 
+            this.cambiarClaveToolStripMenuItem.Name = "cambiarClaveToolStripMenuItem";
+            this.cambiarClaveToolStripMenuItem.Size = new System.Drawing.Size(119, 24);
+            this.cambiarClaveToolStripMenuItem.Text = "Cambiar Clave";
+            this.cambiarClaveToolStripMenuItem.Click += new System.EventHandler(this.cambiarClaveToolStripMenuItem_Click);
+            // 
             // Sabor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(998, 725);
+            this.Controls.Add(this.lblUsuarios);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuSuperior);
@@ -346,6 +381,9 @@
         private System.Windows.Forms.ToolStripMenuItem verCategoriaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem clienteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem registroClientesToolStripMenuItem;
+        private System.Windows.Forms.Button btnUsuario;
+        private System.Windows.Forms.Label lblUsuarios;
+        private System.Windows.Forms.ToolStripMenuItem cambiarClaveToolStripMenuItem;
     }
 }
 
