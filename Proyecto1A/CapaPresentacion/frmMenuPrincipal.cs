@@ -78,5 +78,17 @@ namespace Proyecto1A
             FrmCambiarClave frm = new FrmCambiarClave();
             frm.ShowDialog();
         }
+
+        private void btnCorteCaja_Click(object sender, EventArgs e)
+        {
+            FrmReportes frm = new FrmReportes();
+            frm.ShowDialog();
+        }
+
+        private void btnIventario_Click(object sender, EventArgs e)
+        {
+            FrmReportes frm =new FrmReportes();
+            frm.ShowDialog();
+        }
     }
 }

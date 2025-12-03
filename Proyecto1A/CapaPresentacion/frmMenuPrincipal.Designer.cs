@@ -98,9 +98,10 @@
             this.btnCorteCaja.Name = "btnCorteCaja";
             this.btnCorteCaja.Size = new System.Drawing.Size(215, 64);
             this.btnCorteCaja.TabIndex = 4;
-            this.btnCorteCaja.Text = "Corte de Caja";
+            this.btnCorteCaja.Text = "Generar Reporte";
             this.btnCorteCaja.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCorteCaja.UseVisualStyleBackColor = true;
+            this.btnCorteCaja.Click += new System.EventHandler(this.btnCorteCaja_Click);
             // 
             // btnIventario
             // 
@@ -113,6 +114,7 @@
             this.btnIventario.Text = "Inventario";
             this.btnIventario.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnIventario.UseVisualStyleBackColor = true;
+            this.btnIventario.Click += new System.EventHandler(this.btnIventario_Click);
             // 
             // btnClientes
             // 
@@ -164,7 +166,7 @@
             this.cambiarClaveToolStripMenuItem});
             this.menuSuperior.Location = new System.Drawing.Point(0, 0);
             this.menuSuperior.Name = "menuSuperior";
-            this.menuSuperior.Size = new System.Drawing.Size(998, 28);
+            this.menuSuperior.Size = new System.Drawing.Size(998, 30);
             this.menuSuperior.TabIndex = 1;
             this.menuSuperior.Text = "menuSuperior";
             // 
