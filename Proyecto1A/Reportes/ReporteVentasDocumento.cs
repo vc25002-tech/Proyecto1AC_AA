@@ -37,7 +37,7 @@ namespace Proyecto1A.Reportes
 
                 // -----------------------
                 // SECCIÓN DE ENCABEZADO
-                // -----------------------
+                // ------------------------
                 page.Header().Column(col =>
                 {
                     col.Item().Text("CAFÉ DULCE AROMA")
